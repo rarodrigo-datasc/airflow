@@ -22,7 +22,15 @@ Além disso, o projeto fará uso da tecnologia Airflow para criação do fluxo E
 
 ## 4. Execução
 
-Comandos para iniciar a execução do projeto
+### ETL
+
+* `unzip_task`: Descompactar o arquivo `tre.zip` em `tre.csv` para tratamento dos dados;
+* `extract_task`: Extrair os dados para um data frame;
+* `transform_reduzir_task`: Reduzir os dados para colunas especificadas em código;
+* `transform_remover_duplicadas_task`: Remover as duplicadas baseando-se no arquivo geração pela task anterior;
+* `load_task`: Carregar os dados para um arquivo como resultado da transformação.
+
+### Comandos para iniciar a execução do projeto
 
 * Inicializar
 
@@ -30,19 +38,19 @@ Comandos para iniciar a execução do projeto
 docker compose up airflow-init
 ```
 
-* Subir os containeres
+* Subir os containers
 
 ```bash
 docker compose up
 ```
 
-* Derrubar os containeres
+* Derrubar os containers
 
 ```bash
 docker compose down
 ```
 
-* Limpar o ambiente dos containeres
+* Limpar o ambiente dos containers
 
 ```bash
 docker compose down --volumes --remove-orphans
@@ -50,4 +58,4 @@ docker compose down --volumes --remove-orphans
 
 ## 5. Referências
 
-* [Airflow e Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
+* [Documentação para ambiente Airflow e Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
