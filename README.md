@@ -27,7 +27,7 @@ Além disso, o projeto fará uso da tecnologia Airflow para criação do fluxo E
 * `unzip_task`: Descompactar o arquivo `tre.zip` em `tre.csv` para tratamento dos dados;
 * `extract_task`: Extrair os dados para um data frame;
 * `transform_reduzir_task`: Reduzir os dados para colunas especificadas em código;
-* `transform_remover_duplicadas_task`: Remover as duplicadas baseando-se no arquivo geração pela task anterior;
+* `transform_remover_duplicadas_task`: Remover as duplicadas baseando-se no arquivo gerada pela task anterior;
 * `load_task`: Carregar os dados para um arquivo como resultado da transformação.
 
 ### Comandos para iniciar a execução do projeto
